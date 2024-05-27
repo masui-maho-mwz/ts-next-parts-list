@@ -1,0 +1,146 @@
+.root {
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .root {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    align-items: stretch;
+    height: 100%;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 0;
+  background-color: rgb(var(--rgb-primary));
+  color: rgb(var(--rgb-white));
+}
+.logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+@media (min-width: 1200px) {
+  .logo {
+    height: 80px;
+  }
+}
+@media (max-width: 1199px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    z-index: 1000;
+  }
+  .logo {
+    font-size: 1.25rem;
+    height: 64px;
+  }
+}
+
+.navigation {
+  position: relative;
+}
+.menu > *:first-child {
+  margin-top: 0;
+}
+.menu > *:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 1200px) {
+  .button {
+    display: none;
+  }
+  .menu {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 1199px) {
+  .button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .hamburger {
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 10px;
+    width: 17px;
+    height: 1px;
+    background-color: rgb(var(--rgb-white));
+  }
+  .hamburger:before,
+  .hamburger:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 1px;
+    background-color: rgb(var(--rgb-white));
+  }
+  .hamburger:before {
+    top: -5px;
+  }
+  .hamburger:after {
+    top: 5px;
+  }
+  .menu {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 280px;
+    height: calc(100vh - 64px);
+    background-color: rgb(var(--rgb-primary));
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+  }
+  .menu.open {
+    transform: translateX(0);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(var(--rgb-light-gray));
+}
+.contents {
+  padding: 2rem;
+  flex: 1;
+}
+.contents > *:first-child {
+  margin-top: 0;
+}
+.contents > *:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  padding: 32px 40px;
+  background-color: #333;
+  color: #fff;
+}
+.copyright {
+  font-size: 0.75rem;
+  text-align: center;
+}
