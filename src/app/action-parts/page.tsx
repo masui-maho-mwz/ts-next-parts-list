@@ -1,5 +1,7 @@
-import { PageContainer } from '@/app/shared/components/page-container';
-import { PartsSampleContainer } from '@/app/shared/components/parts-sample-container';
+import { PageContainer } from "@/app/shared/components/page-container";
+import { PartsSampleContainer } from "@/app/shared/components/parts-sample-container";
+import { Button } from "@/components/elements/buttons/button";
+import { TextField } from "@/components/forms/texts/text-field";
 
 export default function ActionPartsPage() {
   return (
@@ -38,14 +40,25 @@ export default function ActionPartsPage() {
       <section>
         <h2>ボタン</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <Button type="button" value="ボタンパターン" />
+          <Button type="button" value="ボタン (disabled) パターン" isDisabled />
+          <Button type="link" href="/" value="リンクパターン" />
+          <Button
+            type="link"
+            href="https://tech-quest.club"
+            value=" 別タブリンクパターン"
+            target="_blank"
+          />
         </PartsSampleContainer>
       </section>
 
       <section>
         <h2>テキスト入力</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <TextField type="text" name="text-field" />
+          <TextField type="password" name="password-field" />
+          <TextField type="email" name="email-field" />
+          <TextField type="text" name="disabled-text-field" disabled />
         </PartsSampleContainer>
       </section>
 
