@@ -3,7 +3,9 @@ import { PartsSampleContainer } from "@/app/shared/components/parts-sample-conta
 import { Heading } from "@/components/elements/headings/heading";
 import { HeadingWithLeftLine } from "@/components/elements/headings/heading-with-left-line";
 import { HeadingWithLineIcon } from "@/components/elements/headings/heading-with-line-icon";
+import { HeadingWithShortUnderline } from "@/components/elements/headings/heading-with-short-underline";
 import { HeadingWithUnderline } from "@/components/elements/headings/heading-with-underline";
+import { LeadText } from "@/components/elements/typographies/lead-text";
 
 export default function TypographyPartsPage() {
   return (
@@ -128,14 +130,42 @@ export default function TypographyPartsPage() {
       <section>
         <h2>短下線付き見出し</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <HeadingWithShortUnderline
+            variant="h1"
+            value="H1 見出し"
+          ></HeadingWithShortUnderline>
+          <HeadingWithShortUnderline
+            variant="h1"
+            value="文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト"
+          ></HeadingWithShortUnderline>
+          <HeadingWithShortUnderline
+            variant="h2"
+            value="H2 見出し"
+          ></HeadingWithShortUnderline>
+          <HeadingWithShortUnderline
+            variant="h3"
+            value="H3 見出し"
+          ></HeadingWithShortUnderline>
+          <HeadingWithShortUnderline
+            variant="h4"
+            value="H4 見出し"
+          ></HeadingWithShortUnderline>
+          <HeadingWithShortUnderline
+            variant="h5"
+            value="H5 見出し"
+          ></HeadingWithShortUnderline>
+          <HeadingWithShortUnderline
+            variant="h6"
+            value="H6 見出し"
+          ></HeadingWithShortUnderline>
         </PartsSampleContainer>
       </section>
 
       <section>
         <h2>リードテキスト</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <LeadText value="リードテキスト" />
+          <LeadText value="文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト" />
         </PartsSampleContainer>
       </section>
 
