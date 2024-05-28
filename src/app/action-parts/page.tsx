@@ -1,7 +1,9 @@
 import { PageContainer } from "@/app/shared/components/page-container";
 import { PartsSampleContainer } from "@/app/shared/components/parts-sample-container";
 import { Button } from "@/components/elements/buttons/button";
+import { PulldownField } from "@/components/forms/selections/pulldown-field";
 import { TextField } from "@/components/forms/texts/text-field";
+import { TextareaField } from "@/components/forms/texts/textarea-field";
 
 export default function ActionPartsPage() {
   return (
@@ -65,14 +67,40 @@ export default function ActionPartsPage() {
       <section>
         <h2>テキスト入力 (複数行)</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <TextareaField name="textarea-field" />
+          <TextareaField name="disabled-textarea-field" disabled />
         </PartsSampleContainer>
       </section>
 
       <section>
         <h2>プルダウン</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <PulldownField
+            name="pulldown-field"
+            items={[
+              { value: "", label: "選択してください" },
+              { value: "apple", label: "りんご" },
+              { value: "banana", label: "バナナ" }
+            ]}
+          />
+          <PulldownField
+            name="selected-pulldown-field"
+            defaultValue="apple"
+            items={[
+              { value: "", label: "選択してください" },
+              { value: "apple", label: "りんご" },
+              { value: "banana", label: "バナナ" }
+            ]}
+          />
+          <PulldownField
+            name="disabled-pulldown-field"
+            items={[
+              { value: "", label: "選択してください" },
+              { value: "apple", label: "りんご" },
+              { value: "banana", label: "バナナ" }
+            ]}
+            disabled
+          />
         </PartsSampleContainer>
       </section>
 
