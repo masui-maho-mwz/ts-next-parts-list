@@ -1,5 +1,7 @@
-import { PageContainer } from '@/app/shared/components/page-container';
-import { PartsSampleContainer } from '@/app/shared/components/parts-sample-container';
+import { PageContainer } from "@/app/shared/components/page-container";
+import { PartsSampleContainer } from "@/app/shared/components/parts-sample-container";
+import { Heading } from "@/components/elements/headings/heading";
+import { HeadingWithUnderline } from "@/components/elements/headings/heading-with-underline";
 
 export default function TypographyPartsPage() {
   return (
@@ -28,14 +30,28 @@ export default function TypographyPartsPage() {
       <section>
         <h2>通常見出し</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <Heading variant="h1" value="H1 見出し" />
+          <Heading variant="h2" value="H2 見出し" />
+          <Heading variant="h3" value="H3 見出し" />
+          <Heading variant="h4" value="H4 見出し" />
+          <Heading variant="h5" value="H5 見出し" />
+          <Heading variant="h6" value="H6 見出し" />
         </PartsSampleContainer>
       </section>
 
       <section>
         <h2>下線付き見出し</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <HeadingWithUnderline variant="h1" value="H1 見出し" />
+          <HeadingWithUnderline
+            variant="h1"
+            value="文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト"
+          />
+          <HeadingWithUnderline variant="h2" value="H2 見出し" />
+          <HeadingWithUnderline variant="h3" value="H3 見出し" />
+          <HeadingWithUnderline variant="h4" value="H4 見出し" />
+          <HeadingWithUnderline variant="h5" value="H5 見出し" />
+          <HeadingWithUnderline variant="h6" value="H6 見出し" />
         </PartsSampleContainer>
       </section>
 
