@@ -1,6 +1,8 @@
 import { PageContainer } from "@/app/shared/components/page-container";
 import { PartsSampleContainer } from "@/app/shared/components/parts-sample-container";
 import { Heading } from "@/components/elements/headings/heading";
+import { HeadingWithLeftLine } from "@/components/elements/headings/heading-with-left-line";
+import { HeadingWithLineIcon } from "@/components/elements/headings/heading-with-line-icon";
 import { HeadingWithUnderline } from "@/components/elements/headings/heading-with-underline";
 
 export default function TypographyPartsPage() {
@@ -58,14 +60,68 @@ export default function TypographyPartsPage() {
       <section>
         <h2>左線付きテキスト</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <HeadingWithLeftLine
+            variant="h1"
+            value="H1 見出し"
+          ></HeadingWithLeftLine>
+          <HeadingWithLeftLine
+            variant="h1"
+            value="文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト"
+          ></HeadingWithLeftLine>
+          <HeadingWithLeftLine
+            variant="h2"
+            value="H2 見出し"
+          ></HeadingWithLeftLine>
+          <HeadingWithLeftLine
+            variant="h3"
+            value="H3 見出し"
+          ></HeadingWithLeftLine>
+          <HeadingWithLeftLine
+            variant="h4"
+            value="H4 見出し"
+          ></HeadingWithLeftLine>
+          <HeadingWithLeftLine
+            variant="h5"
+            value="H5 見出し"
+          ></HeadingWithLeftLine>
+          <HeadingWithLeftLine
+            variant="h6"
+            value="H6 見出し"
+          ></HeadingWithLeftLine>
         </PartsSampleContainer>
       </section>
 
       <section>
         <h2>線形アイコン付き見出し</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <HeadingWithLineIcon
+            variant="h1"
+            value="H1 見出し"
+          ></HeadingWithLineIcon>
+          <HeadingWithLineIcon
+            variant="h1"
+            value="文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト文量テスト"
+          ></HeadingWithLineIcon>
+          <HeadingWithLineIcon
+            variant="h2"
+            value="H2 見出し"
+          ></HeadingWithLineIcon>
+          <HeadingWithLineIcon
+            variant="h3"
+            value="H3 見出し"
+          ></HeadingWithLineIcon>
+          <HeadingWithLineIcon
+            variant="h4"
+            value="H4 見出し"
+          ></HeadingWithLineIcon>
+          <HeadingWithLineIcon
+            variant="h5"
+            value="H5 見出し"
+          ></HeadingWithLineIcon>
+          <HeadingWithLineIcon
+            variant="h6"
+            value="H6 見出し"
+          ></HeadingWithLineIcon>
         </PartsSampleContainer>
       </section>
 
