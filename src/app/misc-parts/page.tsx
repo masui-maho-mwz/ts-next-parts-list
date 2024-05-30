@@ -1,5 +1,11 @@
-import { PageContainer } from '@/app/shared/components/page-container';
-import { PartsSampleContainer } from '@/app/shared/components/parts-sample-container';
+import { PageContainer } from "@/app/shared/components/page-container";
+import { PartsSampleContainer } from "@/app/shared/components/parts-sample-container";
+import { AvatarMedia } from "@/components/containers/media-obujects/avatar-media";
+import { Chip } from "@/components/elements/accessories/chip";
+import { FluidImage } from "@/components/elements/images/fluid-image";
+import { Pagination } from "@/components/elements/navigations/pagenation";
+import sampleImage100 from "./assets/images/sampleImage100.jpg";
+import sampleImage960 from "./assets/images/sampleImage960.jpg";
 
 export default function ActionPartsPage() {
   return (
@@ -10,28 +16,43 @@ export default function ActionPartsPage() {
       <section>
         <h2>チップ (タグ)</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <Chip value="チップ (primary)" color="primary" />
+          <Chip value="チップ (error)" color="error" />
+          <Chip value="チップ (warning)" color="warning" />
+          <Chip value="チップ (gray)" color="gray" />
         </PartsSampleContainer>
       </section>
 
       <section>
         <h2>ページネーション</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <Pagination length={10} />
+          <Pagination length={10} offset={2} />
         </PartsSampleContainer>
       </section>
 
       <section>
         <h2>リキッド画像</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <FluidImage src={sampleImage960} />
         </PartsSampleContainer>
       </section>
 
       <section>
         <h2>コメントコンポーネント</h2>
         <PartsSampleContainer>
-          ここに作成したコンポーネントを記述
+          <AvatarMedia src={sampleImage100}>
+            <p>
+              コメントの本文が入ります。
+              <br />
+              コメントの本文が入ります。コメントの本文が入ります。コメントの本文が入ります。コメントの本文が入ります。
+            </p>
+          </AvatarMedia>
+          <AvatarMedia>
+            <p>
+              プロフィール画像がない場合は、デフォルトの画像が表示されるようにしましょう。
+            </p>
+          </AvatarMedia>
         </PartsSampleContainer>
       </section>
     </PageContainer>
